@@ -19,8 +19,8 @@ const Movie = (props) => {
     }
 
     const handleFavorite = ()=> {
-        addFavorite(movie);
-        
+        props.addFavorite((!displayFavorites)); 
+
     }
     
     return(<div className="modal-page col">
@@ -65,7 +65,7 @@ const Movie = (props) => {
 const mapStateToProps = state => {
     return({
         movies: state.movie.movies,
-        displayFavorites: state.favorites
+        displayFavorites: state.favorite.displayFavorites
     });
   }
 
