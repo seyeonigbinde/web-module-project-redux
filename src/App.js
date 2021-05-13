@@ -23,7 +23,7 @@ const App = props => {
       <div className="container">
         <MovieHeader/>
         <div className="row ">
-          {displayFavorites && <FavoriteMovieList/>}
+          {props.displayFavorites && <FavoriteMovieList/>}
         
           <Switch>
             <Route exact path="/movies/add">
@@ -47,5 +47,11 @@ const App = props => {
     </div>
   );
 };
+const mapStateToProps = state => {
+  return({
 
-export default App;
+      displayFavorites: state.favorite.displayFavorites
+  });
+}
+
+export default connect(mapStateToProps)(App);
