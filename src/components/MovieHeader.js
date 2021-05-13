@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { toggleFavorite} from '../actions/movieActions';
+import { toggleFavorite} from '../actions/favoriteActions';
 
 const MovieHeader = (props) => {
     const appTitle = "";
